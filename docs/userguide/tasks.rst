@@ -1306,10 +1306,11 @@ FAILURE
 
 Task execution resulted in failure.
 
-:meta-data: `result` contains the exception occurred, and `traceback`
+:meta-data: `result` contains the exception, and `traceback`
             contains the backtrace of the stack at the point when the
             exception was raised.
 :propagates: Yes
+:ready: Yes
 
 .. state:: RETRY
 
@@ -1320,7 +1321,7 @@ Task is being retried.
 
 :meta-data: `result` contains the exception that caused the retry,
             and `traceback` contains the backtrace of the stack at the point
-            when the exceptions was raised.
+            when the exception was raised.
 :propagates: No
 
 .. state:: REVOKED
@@ -1331,6 +1332,7 @@ REVOKED
 Task has been revoked.
 
 :propagates: Yes
+:ready: Yes
 
 .. _custom-states:
 
